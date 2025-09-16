@@ -84,6 +84,9 @@ func ExampleResourceSchema(ctx context.Context) schema.Schema {
 				},
 				Optional: true,
 			},
+			"dynamic_type": schema.DynamicAttribute{
+				Required: true,
+			},
 			"int64_attribute_write_only": schema.Int64Attribute{
 				Optional:  true,
 				WriteOnly: true,
@@ -283,6 +286,7 @@ type ExampleModel struct {
 	BoolAttribute                     my_bool_value                          `tfsdk:"bool_attribute"`
 	DuplicatedCustomType1             DuplicatedCustomType1Value             `tfsdk:"duplicated_custom_type1"`
 	DuplicatedCustomType2             DuplicatedCustomType2Value             `tfsdk:"duplicated_custom_type2"`
+	DynamicType                       types.Dynamic                          `tfsdk:"dynamic_type"`
 	Int64AttributeWriteOnly           types.Int64                            `tfsdk:"int64_attribute_write_only"`
 	ListNestedAttributeAssocExtType   types.List                             `tfsdk:"list_nested_attribute_assoc_ext_type"`
 	MapNestedAttributeAssocExtType    types.Map                              `tfsdk:"map_nested_attribute_assoc_ext_type"`

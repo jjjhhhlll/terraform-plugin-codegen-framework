@@ -110,6 +110,8 @@ func NewAttribute(a resource.Attribute) (generatorschema.GeneratorAttribute, err
 		return NewGeneratorSingleNestedAttribute(a.Name, a.SingleNested)
 	case a.String != nil:
 		return NewGeneratorStringAttribute(a.Name, a.String)
+	case a.Dynamic != nil:
+		return NewGeneratorDynamicAttribute(a.Name, a.Dynamic)
 	}
 
 	return nil, fmt.Errorf("attribute type not defined: %+v", a)
