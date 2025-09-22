@@ -1,0 +1,6 @@
+
+func (t {{.Name}}Type) ValueFromString(ctx context.Context, in basetypes.DynamicValue) (basetypes.DynamicValuable, diag.Diagnostics) {
+return {{.Name}}Value{
+DynamicValue: in
+}, nil
+}

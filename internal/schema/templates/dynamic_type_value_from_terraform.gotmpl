@@ -1,0 +1,22 @@
+
+func (t {{.Name}}Type) ValueFromTerraform(ctx context.Context, in tftypes.Value) (attr.Value, error) {
+attrValue, err := t.DynamicType.ValueFromTerraform(ctx, in)
+
+if err != nil {
+return nil, err
+}
+
+dynamicValue, ok := attrValue.(basetypes.DynamicValue)
+
+if !ok {
+return nil, fmt.Errorf("unexpected value type of %T", attrValue)
+}
+
+dynamicValuable, diags := t.ValueFromDynamic(ctx, dynamicValue)
+
+if diags.HasError() {
+return nil, fmt.Errorf("unexpected error converting DynamicValue to DynamicValuable: %v", diags)
+}
+
+return dynamicValuable, nil
+}

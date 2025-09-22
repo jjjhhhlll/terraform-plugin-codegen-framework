@@ -1360,6 +1360,12 @@
                 }
               ]
             }
+          },
+          {
+            "name": "dynamic_type",
+            "dynamic": {
+                "computed_optional_required": "required"
+            }
           }
         ],
         "blocks": [

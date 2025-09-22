@@ -492,3 +492,48 @@ var StringValueValueTemplate string
 
 //go:embed templates/string_value_valuable.gotmpl
 var StringValueValuableTemplate string
+
+// Dynamic From/To
+
+//go:embed templates/dynamic_from.gotmpl
+var DynamicFromTemplate string
+
+//go:embed templates/dynamic_to.gotmpl
+var DynamicToTemplate string
+
+// Dynamic Type
+
+//go:embed templates/dynamic_type_equal.gotmpl
+var DynamicTypeEqualTemplate string
+
+//go:embed templates/dynamic_type_string.gotmpl
+var DynamicTypeStringTemplate string
+
+//go:embed templates/dynamic_type_type.gotmpl
+var DynamicTypeTypeTemplate string
+
+//go:embed templates/dynamic_type_typable.gotmpl
+var DynamicTypeTypableTemplate string
+
+//go:embed templates/dynamic_type_value_from_string.gotmpl
+var DynamicTypeValueFromStringTemplate string
+
+//go:embed templates/dynamic_type_value_from_terraform.gotmpl
+var DynamicTypeValueFromTerraformTemplate string
+
+//go:embed templates/dynamic_type_value_type.gotmpl
+var DynamicTypeValueTypeTemplate string
+
+// Dynamic Value
+
+//go:embed templates/dynamic_value_equal.gotmpl
+var DynamicValueEqualTemplate string
+
+//go:embed templates/dynamic_value_type.gotmpl
+var DynamicValueTypeTemplate string
+
+//go:embed templates/dynamic_value_value.gotmpl
+var DynamicValueValueTemplate string
+
+//go:embed templates/dynamic_value_valuable.gotmpl
+var DynamicValueValuableTemplate string

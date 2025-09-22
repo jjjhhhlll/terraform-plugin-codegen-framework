@@ -110,4 +110,5 @@ const (
 	GeneratorSingleNestedAttribute
 	GeneratorSingleNestedBlock
 	GeneratorStringAttribute
+	GeneratorDynamicAttribute
 )

@@ -18,6 +18,7 @@ const (
 	ObjectValueType  = "types.Object"
 	SetValueType     = "types.Set"
 	StringValueType  = "types.String"
+	DynamicValueType = "types.Dynamic"
 )
 
 type Field struct {
