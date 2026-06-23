@@ -108,6 +108,8 @@ func NewAttribute(a datasource.Attribute) (generatorschema.GeneratorAttribute, e
 		return NewGeneratorSetNestedAttribute(a.Name, a.SetNested)
 	case a.SingleNested != nil:
 		return NewGeneratorSingleNestedAttribute(a.Name, a.SingleNested)
+	case a.Dynamic != nil:
+		return NewGeneratorDynamicAttribute(a.Name, a.Dynamic)
 	case a.String != nil:
 		return NewGeneratorStringAttribute(a.Name, a.String)
 	}
